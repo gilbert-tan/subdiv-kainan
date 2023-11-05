@@ -1,9 +1,9 @@
 <template>
   <div>
-    <main>
+    <div>
       <SubdivKainanNavigation />
-      <slot></slot>
-    </main>
+      <router-view />
+    </div>
     <footer class="bg-gray-800">
       <div class="flex flex-1 mx-auto max-w-7xl sm:px-6 lg:px-8 px-3 py-2">
         <h2 class="text-white px-3 py-2 text-sm font-medium">

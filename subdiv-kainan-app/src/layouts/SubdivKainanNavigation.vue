@@ -17,9 +17,11 @@
           class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="flex flex-shrink-0 items-center">
-            <h2 class="text-white px-3 py-2 text-sm font-medium">
-              Subdiv Kainan
-            </h2>
+            <a :href="this.$router.resolve({ name: 'info' }).href">
+              <h2 class="text-white px-3 py-2 text-sm font-medium">
+                Subdiv Kainan
+              </h2>
+            </a>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
@@ -69,14 +71,19 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 export default {
   name: "SubdivKainanNavigation",
   components: { Disclosure, DisclosureButton, DisclosurePanel, Bars3Icon, XMarkIcon },
-  data() {
-    return {
-      navigation: [
-        { name: 'Info', href: '#', current: true },
-        { name: 'Subdivisions', href: '#', current: false },
-        { name: 'Latest Kainan', href: '#', current: false },
-      ]
-    }
-  }
+  computed: {
+    navigation() {
+      return [
+        {
+          name: 'Subdivisions', href: this.$router.resolve({ name: 'subdivisions' }).href,
+          current: this.$route.path === this.$router.resolve({ name: 'subdivisions' }).href,
+        },
+        {
+          name: 'Latest Kainan', href: this.$router.resolve({ name: 'latest-kainan' }).href,
+          current: this.$route.path === this.$router.resolve({ name: 'latest-kainan' }).href,
+        },
+      ];
+    },
+  },
 };
 </script>
