@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <SubdivKainanNavigation />
+      <SubdivKainanAdminNavigation />
       <router-view />
     </div>
     <footer class="bg-gray-800">
@@ -15,15 +15,15 @@
 </template>
 
 <script>
-import SubdivKainanNavigation from "@/layouts/SubdivKainanNavigation.vue";
+import SubdivKainanAdminNavigation from "@/layouts/admin-portal/SubdivKainanAdminNavigation.vue";
 
 export default {
-  name: "SubdivKainanLayout",
-  components: { SubdivKainanNavigation },
+  name: "SubdivKainanAdminLayout",
+  components: { SubdivKainanAdminNavigation },
   props: {
     footerText: {
       type: String,
-      default: "2023",
+      default: "Admin 2023",
     },
   },
 };

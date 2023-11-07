@@ -69,18 +69,20 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 export default {
-  name: "SubdivKainanNavigation",
+  name: "SubdivKainanViewerNavigation",
   components: { Disclosure, DisclosureButton, DisclosurePanel, Bars3Icon, XMarkIcon },
   computed: {
     navigation() {
       return [
         {
-          name: 'Subdivisions', href: this.$router.resolve({ name: 'subdivisions' }).href,
-          current: this.$route.path === this.$router.resolve({ name: 'subdivisions' }).href,
+          name: 'Subdivisions',
+          href: this.$router.resolve({ name: 'subdivisions' }).href,
+          current: this.$route.name === 'subdivisions',
         },
         {
-          name: 'Latest Kainan', href: this.$router.resolve({ name: 'latest-kainan' }).href,
-          current: this.$route.path === this.$router.resolve({ name: 'latest-kainan' }).href,
+          name: 'Latest Kainan',
+          href: this.$router.resolve({ name: 'latest-kainan' }).href,
+          current: this.$route.name === 'latest-kainan',
         },
       ];
     },
