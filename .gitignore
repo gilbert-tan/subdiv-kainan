@@ -1,6 +1,6 @@
 .DS_Store
-subdiv-kainan-app/node_modules
-subdiv-kainan-app/dist
+node_modules
+dist
 
 
 # local env files
