@@ -1,4 +1,6 @@
 # subdiv-kainan
+personal project to learn stuffs.
+
 
 ## Project setup
 ```
